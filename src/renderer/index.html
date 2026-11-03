@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:">
+  <title>Cuadrito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mode-mascot">
+  <div id="root">
+    <div id="card">
+      <div id="buddy"><canvas id="sprite" width="16" height="16"></canvas></div>
+      <div id="details">
+        <div class="limit" id="limit-five">
+          <span class="name"></span>
+          <div class="track"><div class="fill"></div></div>
+          <span class="pct">—</span>
+          <span class="reset"></span>
+        </div>
+        <div class="limit" id="limit-week">
+          <span class="name"></span>
+          <div class="track"><div class="fill"></div></div>
+          <span class="pct">—</span>
+          <span class="reset"></span>
+        </div>
+        <div id="notice" hidden>
+          <span id="notice-text"></span>
+          <button id="signin" type="button" hidden></button>
+        </div>
+        <div id="meta">
+          <span id="updated"></span>
+          <span id="actions">
+            <button id="glass" type="button">◐</button>
+            <button id="refresh" type="button">↻</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="handle" data-dir="n"></div>
+    <div class="handle" data-dir="s"></div>
+    <div class="handle" data-dir="e"></div>
+    <div class="handle" data-dir="w"></div>
+    <div class="handle" data-dir="ne"></div>
+    <div class="handle" data-dir="nw"></div>
+    <div class="handle" data-dir="sw"></div>
+    <div class="handle" data-dir="se"></div>
+  </div>
+  <script src="../i18n.js"></script>
+  <script src="../sprite.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

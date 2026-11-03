@@ -1,0 +1,28 @@
+{
+  "name": "cuadrito",
+  "version": "0.1.0",
+  "description": "Unofficial floating pixel buddy that shows your Claude 5-hour and weekly usage limits, for chat, Cowork and Claude Code.",
+  "main": "src/main.js",
+  "license": "MIT",
+  "author": "Mr. Ly",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "gen:expressions": "node scripts/gen-expressions.js",
+    "smoke": "node scripts/run-smoke.js",
+    "make:icon": "electron scripts/make-icon.js",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.cuadrito.usage",
+    "productName": "Cuadrito",
+    "files": ["src/**/*", "!src/smoke.js"],
+    "directories": { "buildResources": "build", "output": "dist" },
+    "win": { "target": "portable", "artifactName": "Cuadrito-${version}-windows.exe" },
+    "mac": { "target": "dmg", "artifactName": "Cuadrito-${version}-mac-${arch}.dmg", "identity": null }
+  },
+  "devDependencies": {
+    "electron": "45.2.1",
+    "electron-builder": "26.18.0"
+  }
+}
