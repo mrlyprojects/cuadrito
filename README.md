@@ -30,12 +30,39 @@ A tiny pixel buddy that floats on your desktop and shows how much of your Claude
 
 ## Install
 
-1. Download the latest file from [Releases](../../releases): `.exe` for Windows, `.dmg` for Mac.
-2. Open it and sign in to Claude in the window that appears.
+### Do it yourself
 
-The builds are not code-signed. Windows SmartScreen may warn you (*More info → Run anyway*), and macOS may ask you to allow it in *System Settings → Privacy & Security*.
+1. **Download it:** [Windows](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-windows.exe) or [Mac with Apple chip](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-mac-arm64.dmg).
+2. **Put it somewhere permanent.** On Windows, move the `.exe` to a folder such as *Documents*, because it runs from there. On Mac, open the `.dmg` and drag Cuadrito to *Applications*.
+3. **Open it.** On Windows the first launch can take about 15 seconds. The builds are not code-signed, so your system may warn you:
+   - Windows: *More info → Run anyway*.
+   - Mac: *System Settings → Privacy & Security → Open Anyway*.
+4. **Sign in to Claude** in the window that appears, with your usual account.
+5. **Tap the character** to fold or unfold the panel. Right-click it for everything else.
+
+To remove it: right-click → **Sign out**, then **Quit**, and delete the file. On Windows your settings stay in `%APPDATA%\Cuadrito` until you delete that folder too.
 
 The Windows build is what the author tests. The Mac build is produced automatically and has not been tested by the author yet.
+
+### Or ask Claude to do it
+
+Paste this into **Claude Code**, or any Claude that can run commands on your computer. The regular chat can't install anything, so use the steps above there.
+
+```text
+Install Cuadrito on this computer. It is an unofficial open-source app from
+https://github.com/mrlyprojects/cuadrito
+
+1. Read the README and tell me in one sentence what it does.
+2. Download the latest release for my system from
+   https://github.com/mrlyprojects/cuadrito/releases/latest
+3. Put it somewhere permanent (Documents on Windows, Applications on Mac) and open it.
+4. Don't turn off or bypass any security warning: explain it and let me decide.
+5. Never ask for or type my password. I will sign in to Claude myself in the
+   window the app opens.
+6. When it's open, tell me where you saved it and how to remove it.
+```
+
+### Use it
 
 Right-click the character, or use its tray icon, for activities, wander, transparency, size, start with the system, sign out and quit.
 
@@ -109,12 +136,39 @@ Un personajito pixelado que flota en tu escritorio y te muestra cuánto llevas u
 
 ### Instalar
 
-1. Descarga el archivo más reciente en [Releases](../../releases): `.exe` para Windows, `.dmg` para Mac.
-2. Ábrelo e inicia sesión en Claude en la ventana que aparece.
+#### Hazlo tú
 
-Los ejecutables no están firmados. Windows SmartScreen puede avisarte (*Más información → Ejecutar de todas formas*), y macOS puede pedirte que lo permitas en *Ajustes del Sistema → Privacidad y seguridad*.
+1. **Descárgalo:** [Windows](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-windows.exe) o [Mac con chip Apple](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-mac-arm64.dmg).
+2. **Déjalo en un lugar fijo.** En Windows, mueve el `.exe` a una carpeta como *Documentos*, porque se ejecuta desde ahí. En Mac, abre el `.dmg` y arrastra Cuadrito a *Aplicaciones*.
+3. **Ábrelo.** En Windows, la primera vez puede tardar unos 15 segundos. Los ejecutables no están firmados, así que tu sistema puede avisarte:
+   - Windows: *Más información → Ejecutar de todas formas*.
+   - Mac: *Ajustes del Sistema → Privacidad y seguridad → Abrir igualmente*.
+4. **Inicia sesión en Claude** en la ventana que aparece, con tu cuenta de siempre.
+5. **Toca el personaje** para plegar o desplegar el panel. Con clic derecho tienes todo lo demás.
+
+Para quitarlo: clic derecho → **Cerrar sesión**, luego **Salir de Cuadrito**, y borra el archivo. En Windows, tus ajustes quedan en `%APPDATA%\Cuadrito` hasta que borres también esa carpeta.
 
 La versión de Windows es la que prueba el autor. La de Mac se compila automáticamente y el autor todavía no la ha probado.
+
+#### O pídeselo a Claude
+
+Pega esto en **Claude Code**, o en cualquier Claude que pueda ejecutar comandos en tu computadora. El chat normal no puede instalar nada; ahí usa los pasos de arriba.
+
+```text
+Instala Cuadrito en esta computadora. Es una app no oficial de código abierto:
+https://github.com/mrlyprojects/cuadrito
+
+1. Lee el README y dime en una frase qué hace.
+2. Descarga la última versión para mi sistema desde
+   https://github.com/mrlyprojects/cuadrito/releases/latest
+3. Déjala en un lugar fijo (Documentos en Windows, Aplicaciones en Mac) y ábrela.
+4. No desactives ni te saltes ningún aviso de seguridad: explícamelo y déjame decidir.
+5. Nunca me pidas ni escribas mi contraseña. Yo inicio sesión en Claude en la
+   ventana que abre la app.
+6. Cuando esté abierta, dime dónde la guardaste y cómo quitarla.
+```
+
+#### Úsalo
 
 Con clic derecho en el personaje, o desde su icono en la bandeja del sistema, tienes actividades, paseo, transparencia, tamaño, inicio con el sistema, cerrar sesión y salir.
 

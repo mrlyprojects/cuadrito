@@ -18,8 +18,8 @@
     "productName": "Cuadrito",
     "files": ["src/**/*", "!src/smoke.js"],
     "directories": { "buildResources": "build", "output": "dist" },
-    "win": { "target": "portable", "artifactName": "Cuadrito-${version}-windows.exe" },
-    "mac": { "target": "dmg", "artifactName": "Cuadrito-${version}-mac-${arch}.dmg", "identity": null }
+    "win": { "target": "portable", "artifactName": "Cuadrito-windows.exe" },
+    "mac": { "target": "dmg", "artifactName": "Cuadrito-mac-${arch}.dmg", "identity": "-" }
   },
   "devDependencies": {
     "electron": "45.2.1",
