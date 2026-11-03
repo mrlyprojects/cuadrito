@@ -34,7 +34,7 @@ A tiny pixel buddy that floats on your desktop and shows how much of your Claude
 
 1. **Download it:** [Windows](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-windows.exe) or [Mac with Apple chip](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-mac-arm64.dmg).
 2. **Put it somewhere permanent.** On Windows, move the `.exe` to a folder such as *Documents*, because it runs from there. On Mac, open the `.dmg` and drag Cuadrito to *Applications*.
-3. **Open it.** On Windows the first launch can take about 15 seconds. The builds are not code-signed, so your system may warn you:
+3. **Open it.** On Windows it can take up to a minute the first time, with nothing on screen, so give it a moment before opening it again. The builds are not code-signed, so your system may warn you:
    - Windows: *More info → Run anyway*.
    - Mac: *System Settings → Privacy & Security → Open Anyway*.
 4. **Sign in to Claude** in the window that appears, with your usual account.
@@ -140,7 +140,7 @@ Un personajito pixelado que flota en tu escritorio y te muestra cuánto llevas u
 
 1. **Descárgalo:** [Windows](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-windows.exe) o [Mac con chip Apple](https://github.com/mrlyprojects/cuadrito/releases/latest/download/Cuadrito-mac-arm64.dmg).
 2. **Déjalo en un lugar fijo.** En Windows, mueve el `.exe` a una carpeta como *Documentos*, porque se ejecuta desde ahí. En Mac, abre el `.dmg` y arrastra Cuadrito a *Aplicaciones*.
-3. **Ábrelo.** En Windows, la primera vez puede tardar unos 15 segundos. Los ejecutables no están firmados, así que tu sistema puede avisarte:
+3. **Ábrelo.** En Windows, la primera vez puede tardar hasta un minuto sin mostrar nada en pantalla, así que dale un momento antes de volver a abrirlo. Los ejecutables no están firmados, así que tu sistema puede avisarte:
    - Windows: *Más información → Ejecutar de todas formas*.
    - Mac: *Ajustes del Sistema → Privacidad y seguridad → Abrir igualmente*.
 4. **Inicia sesión en Claude** en la ventana que aparece, con tu cuenta de siempre.
