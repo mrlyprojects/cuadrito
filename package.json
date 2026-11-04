@@ -1,6 +1,6 @@
 {
   "name": "cuadrito",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial floating pixel buddy that shows your Claude 5-hour and weekly usage limits, for chat, Cowork and Claude Code.",
   "main": "src/main.js",
   "license": "MIT",
