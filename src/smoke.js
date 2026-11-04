@@ -20,6 +20,15 @@ async function tap(win, x, y) {
   await wait(400);
 }
 
+async function waitForActivity(win, limitMs) {
+  const deadline = Date.now() + limitMs;
+  while (Date.now() < deadline) {
+    if (await win.webContents.executeJavaScript('Boolean(currentActivity)')) return true;
+    await wait(200);
+  }
+  return false;
+}
+
 async function run({ app, getWindow, getSettings, setUsage, setGlass, setMode, setWander }) {
   const dir = process.env.CUADRITO_SMOKE_DIR;
   fs.mkdirSync(dir, { recursive: true });
@@ -55,6 +64,17 @@ async function run({ app, getWindow, getSettings, setUsage, setGlass, setMode, s
   console.log(`tap on character collapses: ${collapsed === 'mascot'} (mode ${collapsed})`);
 
   setUsage({ five: { percent: 10, resetsAt: inHours(2) }, week: { percent: 3, resetsAt: inHours(40) } });
+
+  setMode('mascot');
+  const started = await waitForActivity(win, 20_000);
+  setMode('panel');
+  await wait(300);
+  setMode('mascot');
+  await wait(300);
+  const resumed = await waitForActivity(win, 25_000);
+  console.log(`activity starts on its own: ${started}`);
+  console.log(`activities come back after the panel interrupts one: ${resumed}`);
+
   await win.webContents.executeJavaScript('startActivity()');
   await wait(200);
   const playing = await win.webContents.executeJavaScript('currentActivity && currentActivity.id');

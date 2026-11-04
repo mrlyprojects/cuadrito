@@ -99,16 +99,18 @@ function canAct() {
   return motionOk && latest && latest.mode === 'mascot' && latest.activities && !isWalking;
 }
 
+function queueActivity() {
+  clearTimeout(activityTimer);
+  activityTimer = setTimeout(startActivity, 6000 + Math.random() * 12000);
+}
+
+// Queues the next one here because an interrupted activity never reaches playFrames' onDone.
 function endActivity() {
   buddy.classList.remove('spin');
   currentActivity = null;
   clearTimeout(frameTimer);
   if (currentState) animate(currentState);
-}
-
-function queueActivity() {
-  clearTimeout(activityTimer);
-  activityTimer = setTimeout(startActivity, 6000 + Math.random() * 12000);
+  queueActivity();
 }
 
 function playFrames(item, onDone) {
@@ -144,10 +146,7 @@ function startActivity() {
   currentActivity = choices[Math.floor(Math.random() * choices.length)];
   lastActivityId = currentActivity.id;
   if (currentActivity.spin) buddy.classList.add('spin');
-  playFrames(currentActivity, () => {
-    endActivity();
-    queueActivity();
-  });
+  playFrames(currentActivity, endActivity);
 }
 
 function hop() {
